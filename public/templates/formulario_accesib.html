@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Formulario</title>
+
+	<link rel="stylesheet" type="text/css" href="accesible.css">
+</head>
+<body>
+	<form>
+
+		<label for="name" tabindex="0">Nombre</label>
+		<input type="text" name="name" aria-labelledby="name" title="Nombre" aria-required="true" tabindex="0">
+		<br>
+		<label for="surname" tabindex="0">Apellido</label>
+		<input type="text" name="surname" aria-labelledby="surname" title="Apellido" aria-required="true" tabindex="0">
+
+		<fieldset>
+		    <legend tabindex="0">Sexo,selecciona una</legend>
+
+		    <label for="hombre" tabindex="0">Hombre</label>
+		    <input type="radio" aria-labelledby="hombre" name="sexo" tabindex="0">
+
+		    <label for="mujer" tabindex="0">Mujer</label>
+		    <input type="radio" aria-labelledby="mujer" name="sexo" tabindex="0">
+		</fieldset>
+
+		<label for="birthday" tabindex="0">Fecha de nacimiento</label><br>
+		<input type="text" aria-required="true" 
+		aria-labelledby="birthday" name="birthday"
+		placeholder="dd-mm-yyyy" tabindex="0">
+		<br>
+		
+		<input type="submit" name="submit" value="Enviar Formulario">
+		<input type="reset" name="reset" value="Limpiar Formulario">
+	</form>
+</body>
+</html>

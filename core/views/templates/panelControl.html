@@ -1,0 +1,125 @@
+<script src="./librerias/javaScript/panelControl.js"></script>
+<script
+src="https://code.jquery.com/jquery-3.6.0.js"
+integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+crossorigin="anonymous" ></script>
+  <!-- Frontend Logic -->
+  <script src="./librerias/javaScript/panelControl.js"></script>
+  <link rel="stylesheet" href="./librerias/css/scroll.css">
+
+<p>
+    <p>
+    <h1>Panel de Control del Administrador</h1>
+    </p>
+  <!-- NAVIGATION  -->
+
+  <div class="container">
+    <div class="row p-4">
+    <hr class="my-4">
+    <p>
+    <h3>Gestión de componentes</h3>
+    </p>
+      <div class="col-md-5">
+        <div class="card">
+          <div class="card-body">
+            <!-- FORM TO ADD TASKS -->
+            <p>
+            <form id="componente-form">
+            <p>
+              <div class="form-group">
+                <input type="text" id="nameComponente" placeholder="Nombre" class="form-control">
+              </div>
+            </p>
+            <p>
+              <div class="form-group">
+                <textarea type="text" id="descriptionComponente" placeholder="Descripcion" class="form-control"></textarea>
+              </div>
+            </p>
+            <p>
+              <div class="form-group">
+            <textarea type="text" id="codeHtmlComponente" placeholder="Codigo Html" class="form-control"></textarea>
+              </div>
+            </p>
+            <p>
+              <div class="form-group">
+                <textarea type="text" id="codeCssComponente" placeholder="Codigo Css" class="form-control"></textarea>
+              </div>
+            </p>
+            <input type="hidden" id="hiddenComponenteId" value="">
+            <p><button type="reset" class="resetComp btn btn-warning">Reset</button></p>
+            </form>
+            <p><button onclick="insertComponent()" class="btn btn-warning">Editar/Añadir Template</button></p>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TABLE  -->
+      <div id="listaComponentes" class="col-md-7">
+        <table class="table table-bordered table-sm">
+          <thead>
+            <tr>
+              <td>Id</td>
+              <td>Nombre</td>
+            </tr>
+          </thead>
+          <tbody id="componentes"></tbody>
+        </table>
+      </div>
+      <hr class="my-4">
+
+      <p>
+      <h3>Gestión de Templates</h3>
+      </p>
+      <div class="col-md-5">
+        <div class="card">
+          <div class="card-body">
+            <!-- FORM TO ADD TASKS -->
+            <p>
+            <form id="template-form">
+              <p>
+              <div class="form-group">
+                <input type="text" id="nombre" placeholder="Nombre" class="form-control">
+              </div>
+              </p>
+              <p>
+              <div class="form-group">
+                <textarea type="text" id="descriptionTemplate" placeholder="Descripcion" class="form-control"></textarea>
+              </div>
+            </p>
+            <p>
+              <div class="form-group">
+            <textarea type="text" id="codeHtmlTemplate" placeholder="Codigo Html" class="form-control"></textarea>
+              </div>
+            </p>
+            <p>
+              <div class="form-group">
+                <textarea type="text" id="codeCssTemplate" placeholder="Codigo Css" class="form-control"></textarea>
+              </div>
+            </p>
+            <p>
+              <input type="hidden" id="hiddenTemplateId" value="">
+            </p>
+              <p><button type="reset" class="resetTemp btn btn-warning">Reset</button></p>
+            </form>
+            <p><button onclick="insertTemplate()" class="btn btn-warning">Editar/Añadir Componente</button></p>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TABLE  -->
+      <div id="listaTemplates" class="col-md-7">
+        <table class="table table-bordered table-sm">
+          <thead>
+          <tr>
+            <td>Id</td>
+            <td>Nombre</td>
+          </tr>
+          </thead>
+          <tbody id="templates"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</p>
